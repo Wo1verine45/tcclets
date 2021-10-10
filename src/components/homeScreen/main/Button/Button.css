@@ -1,0 +1,23 @@
+.Button-button-1 {
+    font-size: 30px;
+    padding: 24px 17px; 
+    background-color: rgb(246, 207, 2);
+    color: white;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Button-button-2 {
+    font-size: 16px;
+    padding: 7px 17px;
+    border-radius: 4px;
+    background-color: rgb(246, 207, 2);
+    color: white;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Button-button-1:hover {
+    background-color: rgb(246, 207, 102);
+}
