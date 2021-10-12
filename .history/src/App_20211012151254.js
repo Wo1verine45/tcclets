@@ -25,8 +25,7 @@ export default() => {
         {/*O Map ira iterar sobre a lista, criando um loop e fazendo sempre que houver informações*/}
         {movieList.map((item, key) => (
 
-          /* O Componente Movie ira receber duas props, o title, e o items, que e a requisição com o await*/
-          <Movies key={key} title={item.title} items={item.items}/>
+          <Movies key={key} />
         ))}
       </section>
 
@@ -38,6 +37,7 @@ export default() => {
   );
 }
 
+export default App;
 
 /*
 commit1: adicionei o Title component, que recebe children e diferentes tamanhos como props, para múltiplos usos ao longo do projeto, primeiro 

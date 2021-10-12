@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import Movies from './components/MovieList/Movies';
+import MovieList from './components/MovieList/movies';
 //import { Button } from './components/homeScreen/main/Button';
 //import { Title } from './components/homeScreen/main/Title';
 import InfoBase from './InfoBase';
 import './App.css'
 
-export default() => {
+function App() {
 
   const [movieList, setMovieList] = useState([]);
 
@@ -23,11 +23,12 @@ export default() => {
     <div className="page">
       <section className="lists">
         {/*O Map ira iterar sobre a lista, criando um loop e fazendo sempre que houver informações*/}
-        {movieList.map((item, key) => (
-
-          /* O Componente Movie ira receber duas props, o title, e o items, que e a requisição com o await*/
-          <Movies key={key} title={item.title} items={item.items}/>
-        ))}
+        {movieList.map((item, key) =>
+          <div>
+            {item.title}
+          </div>
+        )}
+        <MovieList key={key} />
       </section>
 
 
@@ -38,6 +39,7 @@ export default() => {
   );
 }
 
+export default App;
 
 /*
 commit1: adicionei o Title component, que recebe children e diferentes tamanhos como props, para múltiplos usos ao longo do projeto, primeiro 

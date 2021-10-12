@@ -1,36 +1,22 @@
-import React, { useEffect, useState } from 'react';
-import Movies from './components/MovieList/Movies';
-//import { Button } from './components/homeScreen/main/Button';
-//import { Title } from './components/homeScreen/main/Title';
-import InfoBase from './InfoBase';
+import React, { useEffect } from 'react';
 import './App.css'
+import { Button } from './components/homeScreen/main/Button';
+import { Title } from './components/homeScreen/main/Title';
+import InfoBase from './InfoBase';
 
-export default() => {
-
-  const [movieList, setMovieList] = useState([]);
+function App() {
 
   useEffect (() => {
     const LoadList = async () => {
       //Pegando toda a lista
       let list = await InfoBase.getHomeList();
-      setMovieList(list);
+      console.log(list);
     }
     
-    LoadList();
   }, [])
 
   return (
-    <div className="page">
-      <section className="lists">
-        {/*O Map ira iterar sobre a lista, criando um loop e fazendo sempre que houver informações*/}
-        {movieList.map((item, key) => (
-
-          /* O Componente Movie ira receber duas props, o title, e o items, que e a requisição com o await*/
-          <Movies key={key} title={item.title} items={item.items}/>
-        ))}
-      </section>
-
-
+    <div className="App">
     {/*Title size={1} /*1 = <h1>; 2 = <h2>; 3 = <h3>; 4 = <h4>*//*childrenTitle</Title>
       {/*Button onClick={null} /*function on click*/ /*/}{/*Button</Button*/
       /*Button onClick={null} size={2}>Button</Button*/}
@@ -38,6 +24,7 @@ export default() => {
   );
 }
 
+export default App;
 
 /*
 commit1: adicionei o Title component, que recebe children e diferentes tamanhos como props, para múltiplos usos ao longo do projeto, primeiro 
