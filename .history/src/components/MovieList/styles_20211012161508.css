@@ -14,17 +14,10 @@
 .movie--row {
     display: inline-block;
     width: 150px;
-    cursor: pointer;
 }
 
 .movie--row img{
     width: 100%;
-    transform: scale(0.9); /*continua com o 100% mas apenas quando o hover esiver ativo*/
-    transition: all ease 0.2s;
-}
-
-.movie--row img:hover {
-    transform: scale(1); /*Ao passar o mouse na img, seu tamanho passará a ter os 100%*/
 }
 
 .movie--list {
