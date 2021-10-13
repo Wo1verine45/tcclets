@@ -30,6 +30,7 @@ export default() => {
           <Movies key={key} title={item.title} items={item.items}/>
         ))}
       </section>
+
       <Header />    
       <footer>
         Aqui vai as informações referente ao projeto
