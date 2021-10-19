@@ -1,16 +1,17 @@
-import React, { /*useEffect,*/ useState } from 'react';
+import React, { /*useEffect, useState*/ } from 'react';
 //import Movies from './components/MovieList/Movies';
 //import Header  from './components/homeScreen/Header'
-//import { Button } from './components/homeScreen/main/Button';
+import { Button } from './components/homeScreen/main/Button';
 //import { Title } from './components/homeScreen/main/Title';
 //import InfoBase from './InfoBase';
 import './App.css'
-import { DropdownMenu } from './components/homeScreen/HomeScreenHeader/DropdownMenu/DropdownMenu';
-import { Title } from './components/homeScreen/main/Title/Title';
+//import { DropdownMenu } from './components/homeScreen/HomeScreenHeader/DropdownMenu/DropdownMenu';
+import { Input } from './components/homeScreen/main/Input/Input';
+//import { Title } from './components/homeScreen/main/Title/Title';
 
 export default() => {
 
-  const [language, setLanguage] = useState('portuguese')
+  /*const [language, setLanguage] = useState('portuguese')
 
   function translate(textId) {
     if (language === 'english') {
@@ -23,6 +24,7 @@ export default() => {
       }
     }
   }
+  */
 
   /*
   const [movieList, setMovieList] = useState([]);
@@ -55,7 +57,7 @@ export default() => {
     //</div>
   //);
 }
-      <DropdownMenu id='language' initialValue={language} options={[
+      {/*<DropdownMenu id='language' initialValue={language} options={[
         {
           label: 'Português',
           value: 'portuguese'
@@ -66,6 +68,12 @@ export default() => {
         }
       ]} setLanguage={setLanguage}/>
       <Title size={1}>{translate('welcome_message')}</Title>
+    </div>
+    )*/}
+    <Input size={1} type='email' id='email' placeholder='Email'/>
+    <Input size={2} type='text' id='name' placeholder='Name'/>
+    <Input size={3} type='password' id='password' placeholder='Password'/>
+    <Button onClick={null} size={1}>Vamos lá</Button>
     </div>
   )
 }

@@ -1,0 +1,13 @@
+.Input-input-1{
+    /*cima, direita, baixo, esquerda*/
+    padding: 26px 10px 20px 6px;
+    width: 500px;
+    font-size: 15px;
+}
+
+.Input-input-2{
+    /*cima, direita, baixo, esquerda*/
+    padding: 13px 5px 10px 3px;
+    width: 350px;
+    font-size: 15px;
+}
