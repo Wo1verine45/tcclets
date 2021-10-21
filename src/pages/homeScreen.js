@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import { Button } from "../components/Button/Button"
-import { DropdownMenu } from "../components/DropdownMenu/DropdownMenu"
+import { DropdownMenu } from "../components/DropdownMenu"
 import { Title } from '../components/Title'
 import { TranslateContext } from "../contexts"
 import { Registration } from "../components/Registration/Registration"

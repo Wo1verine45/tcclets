@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './App.css'
 import { TranslateContext } from './contexts';
 import { translateHelper } from './helpers/translate';
-import { HomeScreen } from './pages/homeScreen';
+import { Login } from './pages/Login';
 
 export default() => {
 
@@ -15,7 +15,7 @@ export default() => {
   return (
     <div className="page">
       <TranslateContext.Provider value={{language, setLanguage, translate}}>
-        <HomeScreen />
+        <Login />
       </TranslateContext.Provider>
     </div>
   )

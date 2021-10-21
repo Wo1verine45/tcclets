@@ -12,6 +12,10 @@ export function translateHelper(textId, language) {
       return 'Ready to venture out? Just enter your email in the field below to register or reset your subscription.'
     } else if (textId === 'signup-bottom') {
       return 'Get Started'
+    } else if (textId === 'login-input') {
+      return 'Email or phone number'
+    } else if (textId === 'password') {
+      return 'Password'
     }
   } else if (language === 'portuguese') {
     if (textId === 'welcome_message') {
@@ -26,6 +30,10 @@ export function translateHelper(textId, language) {
       return 'Pronto para se aventurar? Basta colocar seu email no campo abaixo para se cadastrar ou reiniciar sua assinatura.'
     } else if (textId === 'signup-bottom') {
       return 'Vamos lá'
+    } else if (textId === 'login-input') {
+      return 'Email ou número de telefone'
+    } else if (textId === 'password') {
+      return 'Senha'
     }
   }
 }

@@ -7,7 +7,8 @@
 
 .Input-input-2{
     /*cima, direita, baixo, esquerda*/
-    padding: 13px 5px 10px 3px;
-    width: 350px;
+    padding: 12px 10px;
+    width: 310px;
     font-size: 15px;
+    background-color: #141414;
 }
