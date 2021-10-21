@@ -1,30 +1,16 @@
-import React, { /*useEffect, useState*/ } from 'react';
-//import Movies from './components/MovieList/Movies';
-//import Header  from './components/homeScreen/Header'
-import { Button } from './components/homeScreen/main/Button';
-//import { Title } from './components/homeScreen/main/Title';
-//import InfoBase from './InfoBase';
+import React, { useState } from 'react';
 import './App.css'
-//import { DropdownMenu } from './components/homeScreen/HomeScreenHeader/DropdownMenu/DropdownMenu';
-import { Input } from './components/homeScreen/main/Input/Input';
-//import { Title } from './components/homeScreen/main/Title/Title';
+import { TranslateContext } from './contexts';
+import { translateHelper } from './helpers/translate';
+import { HomeScreen } from './pages/homeScreen';
 
 export default() => {
 
-  /*const [language, setLanguage] = useState('portuguese')
-
+  const [language, setLanguage] = useState('portuguese')
+  
   function translate(textId) {
-    if (language === 'english') {
-      if (textId === 'welcome_message') {
-        return 'Welcome'
-      }
-    } else if (language === 'portuguese') {
-      if (textId === 'welcome_message') {
-        return 'Bem-Vindo'
-      }
-    }
+    return translateHelper(textId, language)
   }
-  */
 
   /*
   const [movieList, setMovieList] = useState([]);
@@ -42,38 +28,9 @@ export default() => {
 
   return (
     <div className="page">
-      {//<section className="lists">
-        //{/*O Map ira iterar sobre a lista, criando um loop e fazendo sempre que houver informações*/}
-        //{movieList.map((item, key) => (
-
-          /* O Componente Movie ira receber duas props, o title, e o items, que e a requisição com o await*/
-          //<Movies key={key} title={item.title} items={item.items}/>
-        //))}
-      //</section>
-      //<Header />    
-      //<footer>
-        //Aqui vai as informações referente ao projeto
-      //</footer>
-    //</div>
-  //);
-}
-      {/*<DropdownMenu id='language' initialValue={language} options={[
-        {
-          label: 'Português',
-          value: 'portuguese'
-        },
-        {
-          label: 'English',
-          value: 'english'
-        }
-      ]} setLanguage={setLanguage}/>
-      <Title size={1}>{translate('welcome_message')}</Title>
-    </div>
-    )*/}
-    <Input size={1} type='email' id='email' placeholder='Email'/>
-    <Input size={2} type='text' id='name' placeholder='Name'/>
-    <Input size={3} type='password' id='password' placeholder='Password'/>
-    <Button onClick={null} size={1}>Vamos lá</Button>
+      <TranslateContext.Provider value={{language, setLanguage, translate}}>
+        <HomeScreen />
+      </TranslateContext.Provider>
     </div>
   )
 }
@@ -92,3 +49,38 @@ setLanguage, a função pra mudar o estado. Para adicionar mais línguas é só 
 usei para o cliente selecionar a língua, tem a função translate que serve para traduzir cada parte do site, que tem que adicionar a tradução para
 cada coisa nova colocada no site
 */
+
+{//<section className="lists">
+        //{/*O Map ira iterar sobre a lista, criando um loop e fazendo sempre que houver informações*/}
+        //{movieList.map((item, key) => (
+
+          /* O Componente Movie ira receber duas props, o title, e o items, que e a requisição com o await*/
+          //<Movies key={key} title={item.title} items={item.items}/>
+        //))}
+      //</section>
+      //<Header />    
+      //<footer>
+        //Aqui vai as informações referente ao projeto
+      //</footer>
+    //</div>
+  //);
+}
+{/*<DropdownMenu id='language' initialValue={language} options={[
+        {
+          label: 'Português',
+          value: 'portuguese'
+        },
+        {
+          label: 'English',
+          value: 'english'
+        }
+      ]} setLanguage={setLanguage}/>
+      <Title size={1}>{translate('welcome_message')}</Title>
+    </div>
+    )*/}
+{/*
+    <Input size={1} type='email' id='email' placeholder='Email'/>
+    <Input size={2} type='text' id='name' placeholder='Name'/>
+    <Input size={3} type='password' id='password' placeholder='Password'/>
+    <Button onClick={null} size={1}>Vamos lá</Button>
+    */}
