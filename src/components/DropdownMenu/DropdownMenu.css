@@ -1,3 +1,10 @@
 .DropdownMenu-form{
     margin-right: 28px;
 }
+
+.DropdownMenu-dropdownmenu{
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    padding: 6px;
+}

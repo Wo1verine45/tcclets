@@ -12,20 +12,6 @@ export default() => {
     return translateHelper(textId, language)
   }
 
-  /*
-  const [movieList, setMovieList] = useState([]);
-
-  useEffect (() => {
-    const LoadList = async () => {
-      //Pegando toda a lista
-      let list = await InfoBase.getHomeList();
-      setMovieList(list);
-    }
-    
-    LoadList();
-  }, [])
-  */
-
   return (
     <div className="page">
       <TranslateContext.Provider value={{language, setLanguage, translate}}>
@@ -49,6 +35,20 @@ setLanguage, a função pra mudar o estado. Para adicionar mais línguas é só 
 usei para o cliente selecionar a língua, tem a função translate que serve para traduzir cada parte do site, que tem que adicionar a tradução para
 cada coisa nova colocada no site
 */
+
+{/*
+  const [movieList, setMovieList] = useState([]);
+
+  useEffect (() => {
+    const LoadList = async () => {
+      //Pegando toda a lista
+      let list = await InfoBase.getHomeList();
+      setMovieList(list);
+    }
+    
+    LoadList();
+  }, [])
+  */}
 
 {//<section className="lists">
         //{/*O Map ira iterar sobre a lista, criando um loop e fazendo sempre que houver informações*/}

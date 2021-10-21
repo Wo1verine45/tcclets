@@ -8,7 +8,7 @@ export function DropdownMenu({ id, initialValue, options, onSelect }) {
 
     return(
         <form className='DropdownMenu-form'>
-            <select id={id} name={id} value={initialValue} onChange={handleOnSelect}>
+            <select className='DropdownMenu-dropdownmenu' id={id} name={id} value={initialValue} onChange={handleOnSelect}>
                 {options.map(
                     (option) => <option value={option.value}>{option.label}</option>
                 )}
