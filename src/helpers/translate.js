@@ -16,6 +16,14 @@ export function translateHelper(textId, language) {
       return 'Email or phone number'
     } else if (textId === 'password') {
       return 'Password'
+    } else if (textId === 'show') {
+      return 'Show'
+    } else if (textId === 'hide') {
+      return 'Hide'
+    } else if (textId === 'first_time') {
+      return 'First time here?'
+    } else if (textId === 'sigmudn_freud') {
+      return 'Register now'
     }
   } else if (language === 'portuguese') {
     if (textId === 'welcome_message') {
@@ -34,6 +42,14 @@ export function translateHelper(textId, language) {
       return 'Email ou número de telefone'
     } else if (textId === 'password') {
       return 'Senha'
+    } else if (textId === 'show') {
+      return 'Mostrar'
+    } else if (textId === 'hide') {
+      return 'Ocultar'
+    } else if (textId === 'first_time') {
+      return 'Primeira vez aqui?'
+    } else if (textId === 'sigmudn_freud') {
+      return 'Cadastra-se agora'
     }
   }
 }
