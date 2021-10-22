@@ -58,3 +58,8 @@ body {
     margin-left: 66px;
     padding-bottom: 100px;
 }
+
+mark{
+    background-color: #141414;
+    color: blue;
+}

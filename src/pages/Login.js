@@ -5,6 +5,7 @@ import { useContext, useState } from "react"
 import { TranslateContext } from "../contexts"
 //import { DropdownMenu } from "../components/DropdownMenu"
 import { Button } from "../components/Button"
+import { Link } from 'react-router-dom'
 
 export function Login() {
 
@@ -53,7 +54,9 @@ export function Login() {
                             setType('password')
                         }}}>{type === 'password' ? translate('show') : translate('hide')}</p>
                         <Button onClick={null} size={3} type='submit'>{translate('sign_in')}</Button>
-                        <p className='first_time'>{translate('first_time')} <a href='#'>{translate('sigmudn_freud')}</a>.</p>
+                        <p className='first_time'>{translate('first_time')} 
+                            <Link to='/'> <mark>{translate('sigmudn_freud')}</mark></Link>.
+                        </p>
                     </form>
                 </div>
             </main>

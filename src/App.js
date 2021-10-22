@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import './App.css'
 import { TranslateContext } from './contexts';
 import { translateHelper } from './helpers/translate';
-import { Login } from './pages/Login';
+import { BrowserRouter as Router } from 'react-router-dom'
+import { Routes } from './routes/routes';
 
 export default() => {
 
@@ -14,9 +15,11 @@ export default() => {
 
   return (
     <div className="page">
-      <TranslateContext.Provider value={{language, setLanguage, translate}}>
-        <Login />
-      </TranslateContext.Provider>
+      <Router>
+        <TranslateContext.Provider value={{language, setLanguage, translate}}>
+          <Routes />
+        </TranslateContext.Provider>
+      </Router>
     </div>
   )
 }

@@ -5,6 +5,8 @@ import { Title } from '../components/Title'
 import { TranslateContext } from "../contexts"
 import { Registration } from "../components/Registration/Registration"
 import logo from '../assets/logo.png'
+import { Link } from 'react-router-dom'
+
 
 export function HomeScreen() {
 
@@ -17,7 +19,9 @@ export function HomeScreen() {
             <img src={logo} alt='logo'/>
           </div>
           <div className='Head'>
-            <Button onClick={null} size={2}>{translate('sign_in')}</Button>
+            <Link to='/login'>
+              <Button onClick={null} size={2}>{translate('sign_in')}</Button>
+            </Link>
             <DropdownMenu id='language'
             initialValue={language} 
             options={
