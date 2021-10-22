@@ -3,12 +3,12 @@ import { Title } from '../components/Title'
 import { Input } from '../components/Input'
 import { useContext, useState } from "react"
 import { TranslateContext } from "../contexts"
-import { DropdownMenu } from "../components/DropdownMenu"
+//import { DropdownMenu } from "../components/DropdownMenu"
 import { Button } from "../components/Button"
 
 export function Login() {
 
-    const { language, setLanguage, translate } = useContext(TranslateContext)
+    const { /*language, setLanguage,*/ translate } = useContext(TranslateContext)
     const [ type, setType ] = useState('password')
 
     function handleOnSubmit(evt) {
@@ -20,7 +20,11 @@ export function Login() {
     return (
         <div className='Login'>
             <header>
-                <img src={logo} alt='logo' />
+                <div className='Logo'>
+                    <img src={logo} alt='logo' />
+                </div>
+                
+                {/*esse dropdown menu vai estar no footer no final
                 <DropdownMenu id='language'
                 initialValue={language} 
                 options={
@@ -35,7 +39,7 @@ export function Login() {
                 }
                     ]
                 } 
-                onSelect={setLanguage}/>
+            onSelect={setLanguage}/>*/}
             </header>
             <main className='Login-main'>
                 <div className='Login-box'>
@@ -43,13 +47,13 @@ export function Login() {
                     <form className='Login-form' onSubmit={handleOnSubmit}>
                         <Input size={2} type='email' id='email' placeholder={translate('login-input')}/>
                         <Input size={2} type={type} id='email' placeholder={translate('password')}/>
-                        <p onClick={() => {if (type === 'password') {
+                        <p className='show_button' onClick={() => {if (type === 'password') {
                             setType('text')
                         } else {
                             setType('password')
                         }}}>{type === 'password' ? translate('show') : translate('hide')}</p>
                         <Button onClick={null} size={3} type='submit'>{translate('sign_in')}</Button>
-                        <p>{translate('first_time')} <a href='#'>{translate('sigmudn_freud')}</a>.</p>
+                        <p className='first_time'>{translate('first_time')} <a href='#'>{translate('sigmudn_freud')}</a>.</p>
                     </form>
                 </div>
             </main>

@@ -8,6 +8,8 @@
 .Input-input-2{
     /*cima, direita, baixo, esquerda*/
     padding: 12px 10px;
+    margin-left: 66px;
+    margin-bottom: 15px;
     width: 310px;
     font-size: 15px;
     border-radius: 4px;
