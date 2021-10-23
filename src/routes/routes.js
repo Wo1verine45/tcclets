@@ -7,10 +7,12 @@ function Routes () {
     return (
         <Switch>
             <Route path='/' exact>
-            <HomeScreen />
+             <HomeScreen />   
             </Route>
-            <Route path='/Login' exact>
-                <Login />
+            <Route path='/Login' exact component={Login}>
+            </Route>
+            <Route>
+                
             </Route>
         </Switch>
     )

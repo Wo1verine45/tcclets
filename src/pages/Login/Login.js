@@ -1,4 +1,3 @@
-import logo from '../../assets/LETSFLIX.png'
 import { Title } from '../../components/Title'
 import { Input } from '../../components/Input'
 import { useContext, useState } from "react"
@@ -6,6 +5,8 @@ import { TranslateContext } from "../../contexts"
 //import { DropdownMenu } from "../components/DropdownMenu"
 import { Button } from "../../components/Button"
 import { Link } from 'react-router-dom'
+import './Login.css'
+
 
 function Login() {
 
@@ -21,9 +22,6 @@ function Login() {
     return (
         <div className='Login'>
             <header>
-                <div className='Logo'>
-                    <img src={logo} alt='logo' />
-                </div>
                 
                 {/*esse dropdown menu vai estar no footer no final
                 <DropdownMenu id='language'
@@ -55,7 +53,7 @@ function Login() {
                         }}}>{type === 'password' ? translate('show') : translate('hide')}</p>
                         <Button onClick={null} size={3} type='submit'>{translate('sign_in')}</Button>
                         <p className='first_time'>{translate('first_time')} 
-                            <Link to='/'> <mark>{translate('sigmudn_freud')}</mark></Link>.
+                            <Link to='/'> <mark className="mark-t1">{translate('sigmudn_freud')}</mark></Link>.
                         </p>
                     </form>
                 </div>
