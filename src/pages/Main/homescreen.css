@@ -28,16 +28,12 @@ img {
     margin-top: 150px;
 }
 
-.login-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
+
 
 .Login-box{
     margin-top: 40px;
     margin-right: 546px;
+    margin-left: 546px;
     padding: 0px;
     background-color: #141414;
 }
