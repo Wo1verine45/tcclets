@@ -1,6 +1,5 @@
   
 .HomeScreen{
-    position: absolute;
     background: url(https://wallpapercave.com/wp/wp3327517.jpg) no-repeat;
     height: 1200px;
     padding: 0;
@@ -14,7 +13,6 @@ img {
 }
 
 .HomeScreenHeader{
-    position: fixed;
     display: flex;
     width: 100%;
     background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.5));
@@ -35,7 +33,7 @@ img {
 .Login-box{
     margin-top: 40px;
     margin-right: 546px;
-    margin-left: 546px;
+    margin-left: 500px;
     padding: 0px;
     background-color: #141414;
 }

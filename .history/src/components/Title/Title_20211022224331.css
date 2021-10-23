@@ -10,7 +10,7 @@
 .Title-title-2{
     padding: 0;
     margin: 0;
-    font-family: 'Netflix Sans','Helvetica Neue',sans-serif;
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
     font-size: 26px;
     color: white;
     margin-bottom: 25px;
@@ -22,7 +22,7 @@
     font-family: 'Netflix Sans','Helvetica Neue',sans-serif;
     font-size: 19.2px;
     color: white;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .Title-title-4{
