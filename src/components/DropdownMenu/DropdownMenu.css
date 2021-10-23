@@ -3,8 +3,9 @@
 }
 
 .DropdownMenu-dropdownmenu{
-    background-color: black;
+    background-color: transparent;
     color: white;
     font-size: 16px;
     padding: 6px;
+    border: 1px solid #fff;
 }

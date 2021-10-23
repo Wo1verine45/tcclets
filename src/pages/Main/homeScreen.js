@@ -1,14 +1,15 @@
 import { useContext } from "react"
-import { Button } from "../components/Button"
-import { DropdownMenu } from "../components/DropdownMenu"
-import { Title } from '../components/Title'
-import { TranslateContext } from "../contexts"
-import { Registration } from "../components/Registration/Registration"
-import logo from '../assets/logo.png'
+import { Button } from "../../components/Button"
+import { DropdownMenu } from "../../components/DropdownMenu"
+import { Title } from '../../components/Title'
+import { TranslateContext } from "../../contexts"
+import { Registration } from "../../components/Registration/Registration"
+import logo from '../../assets/LETSFLIX.png'
 import { Link } from 'react-router-dom'
+import './homescreen.css';
 
 
-export function HomeScreen() {
+function HomeScreen() {
 
   const { language, setLanguage, translate } = useContext(TranslateContext)
 
@@ -44,7 +45,11 @@ export function HomeScreen() {
           <Title size={2}>{translate('subtitle')}</Title>
           <Title size={3}>{translate('signin_label')}</Title>
           <Registration />
+          <div class="bg">
+          </div>
         </main>
       </div>
   )
 }
+
+export default HomeScreen;

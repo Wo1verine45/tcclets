@@ -1,13 +1,13 @@
-import logo from '../assets/logo.png'
-import { Title } from '../components/Title'
-import { Input } from '../components/Input'
+import logo from '../../assets/LETSFLIX.png'
+import { Title } from '../../components/Title'
+import { Input } from '../../components/Input'
 import { useContext, useState } from "react"
-import { TranslateContext } from "../contexts"
+import { TranslateContext } from "../../contexts"
 //import { DropdownMenu } from "../components/DropdownMenu"
-import { Button } from "../components/Button"
+import { Button } from "../../components/Button"
 import { Link } from 'react-router-dom'
 
-export function Login() {
+function Login() {
 
     const { /*language, setLanguage,*/ translate } = useContext(TranslateContext)
     const [ type, setType ] = useState('password')
@@ -63,3 +63,5 @@ export function Login() {
         </div>
     )
 }
+
+export default Login;
