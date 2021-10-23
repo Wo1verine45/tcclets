@@ -1,0 +1,51 @@
+
+.HomeScreen{
+    background: url(https://wallpapercave.com/wp/wp3327517.jpg) no-repeat;
+    height: 1200px;
+    padding: 0;
+    margin: 0;
+    background-size: 100%;
+
+}
+
+
+.HomeScreenHeader{
+    display: flex;
+    width: 100%;
+    background: #141414;
+    opacity: 0.2;
+}
+
+.HomeScreenMain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-right: 350px;
+    margin-left: 350px;
+    margin-top: 150px;
+}
+
+.Login-box{
+    margin-top: 40px;
+    margin-left: 525px;
+    margin-right: 546px;
+    padding: 0px;
+    background-color: #141414;
+}
+
+.show_button{
+    /*cima, direita, baixo, esquerda*/
+    margin: 0px 0px 25px 66px;
+    cursor: pointer;
+}
+
+.first_time{
+    margin-left: 66px;
+    padding-bottom: 100px;
+}
+
+mark{
+    background-color: #141414;
+    color: blue;
+}

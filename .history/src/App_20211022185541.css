@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(https://wallpaperaccess.com/full/288727.jpg);
+    color: #fff;
+    font-family:'Roboto', sans-serif;
+}
+
+
+
+.Head{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    align-items: center;
+    margin-right: 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.Logo{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
