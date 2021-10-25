@@ -24,6 +24,8 @@ export function translateHelper(textId, language) {
       return 'First time here?'
     } else if (textId === 'sigmudn_freud') {
       return 'Register now'
+    } else if (textId === 'email-require') {
+      return 'Email is required!'
     }
   } else if (language === 'portuguese') {
     if (textId === 'welcome_message') {
@@ -50,6 +52,8 @@ export function translateHelper(textId, language) {
       return 'Primeira vez aqui?'
     } else if (textId === 'sigmudn_freud') {
       return 'Cadastra-se agora'
+    } else if (textId === 'email-require') {
+      return 'O email é obrigatório.'
     }
   }
 }

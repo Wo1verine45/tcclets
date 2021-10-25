@@ -1,12 +1,9 @@
-import { useState } from "react"
 import './Input.css'
 
-export function Input({ size, type, id, placeholder }) {
-
-    const [value, setValue] = useState('')
+export function Input({ size, type, id, placeholder, value, onChange }) {
 
     function handleOnChange(evt) {
-        setValue(evt.target.value)
+        onChange(evt)
     }
 
    if (size === 1) {

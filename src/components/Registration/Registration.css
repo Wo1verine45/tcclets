@@ -1,3 +1,14 @@
+.Registration{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 .Registration-form{
     display: flex;
+    flex-direction: row;
+}
+
+.errorMessage{
+    color: #ffa00a;
 }
