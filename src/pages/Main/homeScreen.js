@@ -2,7 +2,7 @@ import { useContext } from "react"
 import { Button } from "../../components/Button"
 import { DropdownMenu } from "../../components/DropdownMenu"
 import { Title } from '../../components/Title'
-import { TranslateContext } from "../../contexts"
+import { TranslateContext } from "../../Hooks/contexts"
 import { Registration } from "../../components/Registration/Registration"
 import logo from '../../assets/LETSFLIX.png'
 import { Link } from 'react-router-dom'

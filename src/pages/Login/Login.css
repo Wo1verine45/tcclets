@@ -1,0 +1,43 @@
+
+ 
+.Login {
+    background: url(https://www.teahub.io/photos/full/220-2205714_get-the-latest-movies-data-src-kodi-tv.jpg);
+
+}
+.Login-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.Login-box {
+    margin-top: 30px;
+    height:605px;
+    width: 500px;
+    background:rgba(0, 0, 0, 0.75);
+}
+
+
+
+
+.show_button{
+    /*cima, direita, baixo, esquerda*/
+    margin: 0px 0px 25px 94px;
+    cursor: pointer;
+}   
+
+.first_time {
+    margin: 50px 0 0 120px;
+    text-align: left;
+    color: #fff;
+    
+}
+
+mark {
+    text-decoration: none;
+    background: none;
+    color: blue;
+    
+    
+}
