@@ -1,18 +1,19 @@
 
  
 .Login {
-    background: url(https://www.teahub.io/photos/full/220-2205714_get-the-latest-movies-data-src-kodi-tv.jpg);
-
+    background: url(https://www.teahub.io/photos/full/220-2205714_get-the-latest-movies-data-src-kodi-tv.jpg) no-repeat;
+    height: 100%;
 }
 .Login-main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    
 }
 
 .Login-box {
     margin-top: 30px;
+    /*arrumar essa questão de ficar a barra preta embaixo ou da página ficar grande*/
+    margin-bottom: 118px;
     height:605px;
     width: 500px;
     background:rgba(0, 0, 0, 0.75);
