@@ -6,6 +6,7 @@ import { TranslateContext } from '../../contexts'
 import { Button } from "../../components/Button"
 import { Link } from 'react-router-dom'
 import './Login.css'
+import logo from '../../assets/LETSFLIX.png'
 
 
 function Login() {
@@ -22,7 +23,9 @@ function Login() {
     return (
         <div className='Login'>
             <header>
-                
+                <div className='Logo'>
+                    <img src={logo} alt='logo'/>
+                </div>
                 {/*esse dropdown menu vai estar no footer no final
                 <DropdownMenu id='language'
                 initialValue={language} 

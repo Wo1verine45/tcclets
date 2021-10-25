@@ -3,7 +3,8 @@ import './App.css'
 import { TranslateContext } from './contexts';
 import { translateHelper } from './helpers/translate';
 import { BrowserRouter as Router } from 'react-router-dom'
-import Routes from './routes/routes';
+//import Routes from './routes/routes';
+import RegistrationPage from './pages/RegistrationPage/RegistrationPage';
 
 function App () {
 
@@ -17,7 +18,7 @@ function App () {
     <div className="page">
       <Router>
         <TranslateContext.Provider value={{language, setLanguage, translate}}>
-          <Routes />
+          <RegistrationPage />
         </TranslateContext.Provider>
       </Router>
     </div>
