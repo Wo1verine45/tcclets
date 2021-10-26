@@ -1,6 +1,7 @@
 import { Route, Switch } from 'react-router-dom'
 import HomeScreen from '../pages/Main/homeScreen'
 import Login from '../pages/Login/Login'
+import RegistrationPage from '../pages/RegistrationPage/RegistrationPage';
 
 
 function Routes () {
@@ -9,10 +10,10 @@ function Routes () {
             <Route path='/' exact>
              <HomeScreen />   
             </Route>
-            <Route path='/Login' exact component={Login}>
+            <Route path='/login' exact component={Login}>
             </Route>
-            <Route>
-                
+            <Route path='/registration' exact>
+                <RegistrationPage />
             </Route>
         </Switch>
     )

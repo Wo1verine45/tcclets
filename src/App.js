@@ -3,12 +3,13 @@ import './App.css'
 import { TranslateContext } from './contexts';
 import { translateHelper } from './helpers/translate';
 import { BrowserRouter as Router } from 'react-router-dom'
-//import Routes from './routes/routes';
-import RegistrationPage from './pages/RegistrationPage/RegistrationPage';
+import Routes from './routes/routes';
 
 function App () {
 
   const [language, setLanguage] = useState('portuguese')
+  const [emailValue, setEmailValue] = useState('')
+  const [passwordValue, setPasswordValue] = useState('')
   
   function translate(textId) {
     return translateHelper(textId, language)
@@ -17,8 +18,8 @@ function App () {
   return (
     <div className="page">
       <Router>
-        <TranslateContext.Provider value={{language, setLanguage, translate}}>
-          <RegistrationPage />
+        <TranslateContext.Provider value={{language, setLanguage, translate, emailValue, setEmailValue, passwordValue, setPasswordValue}}>
+          <Routes />
         </TranslateContext.Provider>
       </Router>
     </div>

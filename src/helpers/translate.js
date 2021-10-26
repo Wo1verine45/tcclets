@@ -26,6 +26,12 @@ export function translateHelper(textId, language) {
       return 'Register now'
     } else if (textId === 'email-require') {
       return 'Email is required!'
+    } else if (textId === 'registration-title') {
+      return 'Subscribing to LetsFlix is ​​very easy! To start watching, enter your password.'
+    } else if (textId === 'enter_password') {
+      return 'Enter your password'
+    } else if (textId === 'confirm') {
+      return 'Confirm'
     }
   } else if (language === 'portuguese') {
     if (textId === 'welcome_message') {
@@ -54,6 +60,12 @@ export function translateHelper(textId, language) {
       return 'Cadastra-se agora'
     } else if (textId === 'email-require') {
       return 'O email é obrigatório.'
+    } else if (textId === 'registration-title') {
+      return 'Assinar a LetsFlix é muito fácil! Para começar a assistir informe sua senha.'
+    } else if (textId === 'enter_password') {
+      return 'Informe a senha'
+    } else if (textId === 'confirm') {
+      return 'Confirmar'
     }
   }
 }
