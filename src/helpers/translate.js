@@ -32,6 +32,8 @@ export function translateHelper(textId, language) {
       return 'Enter your password'
     } else if (textId === 'confirm') {
       return 'Confirm'
+    } else if (textId === 'password-required') {
+      return 'Password is required'
     }
   } else if (language === 'portuguese') {
     if (textId === 'welcome_message') {
@@ -66,6 +68,8 @@ export function translateHelper(textId, language) {
       return 'Informe a senha'
     } else if (textId === 'confirm') {
       return 'Confirmar'
+    } else if (textId === 'password-required') {
+      return 'Coloque a senha'
     }
   }
 }

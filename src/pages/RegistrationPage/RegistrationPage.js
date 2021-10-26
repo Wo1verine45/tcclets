@@ -10,10 +10,10 @@ import { Input } from "../../components/Input"
 function RegistrationPage() {
 
     const { translate, emailValue, passwordValue, setPasswordValue } = useContext(TranslateContext)
-    const [ type, setType ] = useState('password')
-    const [ errorMessage, setErrorMessage ] = useState('')
 
-    function OnChange(evt) {
+    const [errorMessage, setErrorMessage] = useState('')
+
+    function OnChangePasswordValue(evt) {
         
         setPasswordValue(evt.target.value)
     }
@@ -21,7 +21,11 @@ function RegistrationPage() {
     function handleOnSubmit(evt) {
         evt.preventDefault()
 
-        
+        if (passwordValue === '') {
+            setErrorMessage(translate('password-required'))
+        } else {
+            console.log('certo')
+        }
     }
 
     return (
@@ -41,12 +45,10 @@ function RegistrationPage() {
                 <p>Email</p>
                 <p>{emailValue}</p>
                 <form className='Registration-password' onSubmit={handleOnSubmit}>
-                    <Input size={2} type={type} id='registration_password' placeholder={translate('enter_password')} value={passwordValue} onChange={OnChange}/>
-                    <p className='show_button' onClick={() => {if (type === 'password') {
-                        setType('text')
-                    } else {
-                        setType('password')
-                    }}}>{type === 'password' ? translate('show') : translate('hide')}</p>
+                    <Input size={2} type='password' id='registration_password' placeholder={translate('enter_password')} value={passwordValue} onChange={OnChangePasswordValue} showButton={1}/>
+                    <div className='Registration-errorMessage'>
+                        {errorMessage && <p className='errorMessage'>{errorMessage}</p>}
+                    </div>
                     <Button onClick={null} size={3} type='submit'>{translate('confirm')}</Button>
                 </form>
             </main>

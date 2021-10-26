@@ -1,14 +1,14 @@
 import { Input } from "../Input/Input";
 import { Button } from "../Button/Button";
 import './Registration.css'
-import { useContext, useState } from "react";
+import { useContext, useState} from "react";
 import { TranslateContext } from "../../contexts";
 import { Link } from "react-router-dom";
 
 export function Registration() {
 
     const { translate, emailValue, setEmailValue } = useContext(TranslateContext)
-    const [ errorMessage, setErrorMessage ] = useState('')
+    const [errorMessage, setErrorMessage] = useState('')
 
     function OnChange(evt) {
         
@@ -21,15 +21,14 @@ export function Registration() {
         if (emailValue === '') {
             setErrorMessage(translate('email-require'))
         } else {
-            console.log('Formulário enviado com sucesso')
-            console.log('Email:', emailValue) 
+            console.log('certo')
         }
     }
 
     return (
         <form className='Registration' onSubmit={handleOnSubmit}>
             <div className='Registration-form'>
-                <Input size={1} type='email' id='email' placeholder='Email' onChange={OnChange} value={emailValue}/>
+                <Input size={1} type='email' id='email' placeholder='Email' onChange={OnChange} value={emailValue} showButton={0}/>
                 {emailValue ? 
                 <Link to='/registration' className='Link'>
                     <Button onClick={null} size={1} type='submit'>{translate('signup-bottom')}</Button>

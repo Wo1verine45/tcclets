@@ -1,22 +1,67 @@
+import { useState, useContext } from 'react'
+import { TranslateContext } from '../../contexts'
 import './Input.css'
 
-export function Input({ size, type, id, placeholder, value, onChange }) {
+export function Input({ size, type, id, placeholder, value, onChange, showButton, inputMessage, message, typeMessage }) {
+
+    const { translate } = useContext(TranslateContext)
+
+    const [ typeState, setTypeState ] = useState(type)
 
     function handleOnChange(evt) {
         onChange(evt)
     }
 
    if (size === 1) {
-       return (
-           <input className='Input-input-1' type={type} id={id} name={id} placeholder={placeholder} value={value} onChange={handleOnChange}/>
-       )
+       if (showButton === 0) {
+           return (
+                <input className='Input-input-1' type={typeState} id={id} name={id} placeholder={placeholder} value={value} onChange={handleOnChange}/>
+            )
+        } else {
+            return (
+                <div className='input-div'>
+                    <input className='Input-input-1' type={typeState} id={id} name={id} placeholder={placeholder} value={value} onChange={handleOnChange}/>
+                    <p className='show_button' onClick={() => {if (typeState === 'password') {
+                        setTypeState('text')
+                    } else {
+                        setTypeState('password')
+                    }}}>{typeState === 'password' ? translate('show') : translate('hide')}</p>
+                </div>
+            )
+        } 
    } else if (size === 2) {
-        return (
-            <input className='Input-input-2' type={type} id={id} name={id} placeholder={placeholder} value={value} onChange={handleOnChange}/>
-        )
+        if (showButton === 0) {
+            return (
+                <input className='Input-input-2' type={typeState} id={id} name={id} placeholder={placeholder} value={value} onChange={handleOnChange}/>
+            )
+        } else {
+            return (
+                <div className='input-div'>
+                    <input className='Input-input-2' type={typeState} id={id} name={id} placeholder={placeholder} value={value} onChange={handleOnChange}/>
+                    <p className='show_button' onClick={() => {if (typeState === 'password') {
+                        setTypeState('text')
+                    } else {
+                        setTypeState('password')
+                    }}}>{typeState === 'password' ? translate('show') : translate('hide')}</p>
+                </div>
+            )
+        } 
    } else {
-        return (
-            <input className='Input-input-3' type={type} id={id} name={id} placeholder={placeholder} value={value} onChange={handleOnChange}/>
-        )
+        if (showButton === 0) {
+            return (
+                <input className='Input-input-3' type={typeState} id={id} name={id} placeholder={placeholder} value={value} onChange={handleOnChange}/>
+            )
+        } else {
+            return (
+                <div className='input-div'>
+                    <input className='Input-input-3' type={typeState} id={id} name={id} placeholder={placeholder} value={value} onChange={handleOnChange}/>
+                    <p className='show_button' onClick={() => {if (typeState === 'password') {
+                        setTypeState('text')
+                    } else {
+                        setTypeState('password')
+                     }}}>{typeState === 'password' ? translate('show') : translate('hide')}</p>
+                </div>
+            )
+        } 
    }
 }
