@@ -11,10 +11,17 @@ function RegistrationPage() {
 
     const { translate, emailValue, passwordValue, setPasswordValue } = useContext(TranslateContext)
     const [ type, setType ] = useState('password')
+    const [ errorMessage, setErrorMessage ] = useState('')
 
     function OnChange(evt) {
         
         setPasswordValue(evt.target.value)
+    }
+
+    function handleOnSubmit(evt) {
+        evt.preventDefault()
+
+        
     }
 
     return (
@@ -33,7 +40,7 @@ function RegistrationPage() {
                 <Title size={3}>{translate('registration-title')}</Title>
                 <p>Email</p>
                 <p>{emailValue}</p>
-                <form>
+                <form className='Registration-password' onSubmit={handleOnSubmit}>
                     <Input size={2} type={type} id='registration_password' placeholder={translate('enter_password')} value={passwordValue} onChange={OnChange}/>
                     <p className='show_button' onClick={() => {if (type === 'password') {
                         setType('text')
