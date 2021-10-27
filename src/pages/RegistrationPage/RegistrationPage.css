@@ -22,3 +22,34 @@ img {
 .Registration-link{
     text-decoration: none;
 }
+
+.RegistrationPage-main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.RegistrationPage-password{
+    text-align: start;
+    margin-top: 175px;
+    height:605px;
+    width: 400px;
+}
+
+.email{
+    margin-bottom: 5px;
+}
+
+.emailValue{
+    margin-bottom: 25px;
+}
+
+.show_button-3{
+    margin-bottom: 20px;
+    margin-right: 400px;
+    cursor: pointer;
+}
+
+.Registration-errorMessage{
+    margin-bottom: 20px;
+}

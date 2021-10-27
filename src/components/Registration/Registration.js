@@ -10,7 +10,7 @@ export function Registration() {
     const { translate, emailValue, setEmailValue } = useContext(TranslateContext)
     const [errorMessage, setErrorMessage] = useState('')
 
-    function OnChange(evt) {
+    function OnChangeEmailValue(evt) {
         
         setEmailValue(evt.target.value)
     }
@@ -28,7 +28,7 @@ export function Registration() {
     return (
         <form className='Registration' onSubmit={handleOnSubmit}>
             <div className='Registration-form'>
-                <Input size={1} type='email' id='email' placeholder='Email' onChange={OnChange} value={emailValue} showButton={0}/>
+                <Input size={1} type='email' id='email' placeholder='Email' onChange={OnChangeEmailValue} value={emailValue} showButton={0}/>
                 {emailValue ? 
                 <Link to='/registration' className='Link'>
                     <Button onClick={null} size={1} type='submit'>{translate('signup-bottom')}</Button>

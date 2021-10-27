@@ -22,9 +22,9 @@
 
 
 
-.show_button{
+.show_button-2{
     /*cima, direita, baixo, esquerda*/
-    margin: 0px 0px 25px 94px;
+    margin: 0px 400px 25px 94px;
     cursor: pointer;
 }   
 

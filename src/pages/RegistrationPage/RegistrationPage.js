@@ -41,16 +41,21 @@ function RegistrationPage() {
                 </div>
             </header>
             <main className='RegistrationPage-main'>
-                <Title size={3}>{translate('registration-title')}</Title>
-                <p>Email</p>
-                <p>{emailValue}</p>
-                <form className='Registration-password' onSubmit={handleOnSubmit}>
-                    <Input size={2} type='password' id='registration_password' placeholder={translate('enter_password')} value={passwordValue} onChange={OnChangePasswordValue} showButton={1}/>
-                    <div className='Registration-errorMessage'>
-                        {errorMessage && <p className='errorMessage'>{errorMessage}</p>}
-                    </div>
-                    <Button onClick={null} size={3} type='submit'>{translate('confirm')}</Button>
-                </form>
+                <div className='RegistrationPage-password'>
+                    <Title  className='RegistrationPage-title' size={3}>{translate('registration-title')}</Title>
+                    <p className='email'>Email</p>
+                    <p className='emailValue'>{emailValue}</p>
+                    <form className='RegistrationPage-form' onSubmit={handleOnSubmit}>
+                        <Input className='RegistrationPage-input' size={3} type='password' id='registration_password' placeholder={translate('enter_password')} value={passwordValue} onChange={OnChangePasswordValue} showButton={1}/>
+                        <div className='Registration-errorMessage'>
+                            {errorMessage && <p className='errorMessage'>{errorMessage}</p>}
+                        </div>
+                        {passwordValue ? 
+                        <Link to='/login' className='Link'>
+                            <Button onClick={null} size={4} type='submit'>{translate('confirm')}</Button>
+                        </Link> : <Button onClick={null} size={4} type='submit'>{translate('confirm')}</Button>}
+                    </form>
+                </div>
             </main>
         </div>
     )

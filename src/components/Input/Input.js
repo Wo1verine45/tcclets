@@ -21,7 +21,7 @@ export function Input({ size, type, id, placeholder, value, onChange, showButton
             return (
                 <div className='input-div'>
                     <input className='Input-input-1' type={typeState} id={id} name={id} placeholder={placeholder} value={value} onChange={handleOnChange}/>
-                    <p className='show_button' onClick={() => {if (typeState === 'password') {
+                    <p className='show_button-1' onClick={() => {if (typeState === 'password') {
                         setTypeState('text')
                     } else {
                         setTypeState('password')
@@ -38,7 +38,7 @@ export function Input({ size, type, id, placeholder, value, onChange, showButton
             return (
                 <div className='input-div'>
                     <input className='Input-input-2' type={typeState} id={id} name={id} placeholder={placeholder} value={value} onChange={handleOnChange}/>
-                    <p className='show_button' onClick={() => {if (typeState === 'password') {
+                    <p className='show_button-2' onClick={() => {if (typeState === 'password') {
                         setTypeState('text')
                     } else {
                         setTypeState('password')
@@ -55,7 +55,7 @@ export function Input({ size, type, id, placeholder, value, onChange, showButton
             return (
                 <div className='input-div'>
                     <input className='Input-input-3' type={typeState} id={id} name={id} placeholder={placeholder} value={value} onChange={handleOnChange}/>
-                    <p className='show_button' onClick={() => {if (typeState === 'password') {
+                    <p className='show_button-3' onClick={() => {if (typeState === 'password') {
                         setTypeState('text')
                     } else {
                         setTypeState('password')

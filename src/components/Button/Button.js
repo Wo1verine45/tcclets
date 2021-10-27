@@ -9,9 +9,13 @@ export function Button ({ children, onClick, size, type }) {
         return (
             <button className='Button-button-2' onClick={onClick} type={type}>{children}</button>
         )
-    } else {
+    } else if (size === 3){
         return (
             <button className='Button-button-3' onClick={onClick} type={type}>{children}</button>
+        )
+    } else {
+        return (
+            <button className='Button-button-4' onClick={onClick} type={type}>{children}</button>
         )
     }
 }
