@@ -51,7 +51,7 @@ function RegistrationPage() {
                             {errorMessage && <p className='errorMessage'>{errorMessage}</p>}
                         </div>
                         {passwordValue ? 
-                        <Link to='/MovieMain' className='Link'>
+                        <Link to="MovieMain" className='Link'>
                             <Button onClick={null} size={4} type='submit'>{translate('confirm')}</Button>
                         </Link> : <Button onClick={null} size={4} type='submit'>{translate('confirm')}</Button>}
                     </form>
