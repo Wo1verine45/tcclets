@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect,useState } from 'react';
 import './App.css'
 import { TranslateContext } from './contexts';
 import { translateHelper } from './helpers/translate';
@@ -10,6 +10,7 @@ function App () {
   const [language, setLanguage] = useState('portuguese')
   const [emailValue, setEmailValue] = useState('')
   const [passwordValue, setPasswordValue] = useState('')
+ 
   
   function translate(textId) {
     return translateHelper(textId, language)
@@ -17,6 +18,7 @@ function App () {
 
   return (
     <div className="page">
+ 
       <Router>
         <TranslateContext.Provider value={{language, setLanguage, translate, emailValue, setEmailValue, passwordValue, setPasswordValue}}>
           <Routes />

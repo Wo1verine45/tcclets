@@ -6,7 +6,7 @@ img {
     position: fixed;
     display: flex;
     width: 100%;
-    background-image: linear-gradient(to top right, rgba(0, 0, 0, 0.1), rgba(0,0,0,0.5));
+    background: transparent;
 }
 
 .RegistrationPageHead{

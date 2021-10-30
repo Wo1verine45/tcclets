@@ -19,7 +19,7 @@
 
 .movie--row img{
     height: 260px;
-    width: 100%;
+    max-width: 100%;
     transform: scale(0.9); /*continua com o 100% mas apenas quando o hover esiver ativo*/
     transition: all ease 0.2s;
 }

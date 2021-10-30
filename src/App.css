@@ -6,7 +6,7 @@
 }
 
 body {
-    background: #333;
+    background: #111;
     color: #fff;
     font-family:'Roboto', sans-serif;
 }
@@ -26,4 +26,8 @@ body {
 .Logo{
     padding-top: 20px;
     margin-bottom: 20px;
+}
+
+.list {
+    margin-top: -150px;
 }
