@@ -62,11 +62,11 @@ function Login() {
             <main className='Login-main'>
                 <div className='Login-box'>
                     <Title size={4}>{translate('sign_in')}</Title>
-                    <form className='Login-form' onSubmit={handleOnSubmit}>
+                    <form classNam  e='Login-form' onSubmit={handleOnSubmit}>
                         <Input size={2} type='email' id='email' placeholder={translate('login-input')} value={emailValueLogin} onChange={OnChangeEmailValueLogin} showButton={0}/>
                        <Input size={2} type='password' id='email' placeholder={translate('password')} value={passwordValueLogin} onChange={OnChangePasswordValueLogin} showButton={1}/>
                        <Button onClick={() => {if (emailValueLogin === emailValue && passwordValueLogin === passwordValue ) {
-                            
+                             
                         }}} size={3} type='submit'>{translate('sign_in')}</Button>
                         <p className='first_time'>{translate('first_time')} 
                             <Link to='/registration'> <mark className="mark-t1">{translate('sigmudn_freud')}</mark></Link>.
